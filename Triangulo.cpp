@@ -52,7 +52,7 @@ double Triangulo::perimetro(){
     v1.calculaDistancia(v3);
 }
 double Triangulo::area(){
-    return 1.0 / 2 * (( (v1.getX() * v2.getY()) +
+    return abs(1.0 / 2 * (( (v1.getX() * v2.getY()) +
                         (v2.getX() * v3.getY()) +
                         (v3.getX() * v1.getY()) ) -
                       
@@ -63,7 +63,7 @@ double Triangulo::area(){
                       
                        )
                       
-                      );
+                      ));
 }
 std::string Triangulo::str(){
     return v1.str() + ',' + v2.str() + ',' + v3.str() ;
